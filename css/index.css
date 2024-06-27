@@ -1,0 +1,599 @@
+/* @font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.eot?4opn0b');
+    src: url('../fonts/icomoon.eot?4opn0b#iefix') format('embedded-opentype'),
+        url('../fonts/icomoon.ttf?4opn0b') format('truetype'),
+        url('../fonts/icomoon.woff?4opn0b') format('woff'),
+        url('../fonts/icomoon.svg?4opn0b#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+   /* font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1; */
+
+    /* Better Font Rendering =========== */
+   /* -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; */
+} 
+
+* {
+    padding: 0;
+    margin: 0;
+	
+}
+
+
+.w {
+    width: 1440px;
+    margin: 0 auto;
+	
+}
+
+body {
+    background:url("../imgs/a20.png");
+    
+}
+
+/* head区域 */
+.head {
+    position:absolute;
+    left: 50%;
+    width: 1440px;
+    margin-left: -720px;
+    z-index: 3;
+    background: rgba(0, 0, 0, 0);
+    height: 90px;
+	border-bottom: 3px solid black ;
+	
+}
+
+.head .logo {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    width: 59px;
+    height: 71px;
+    line-height: 71px;
+    margin-left: 50px;
+
+
+}
+
+.head .logo img {
+
+    width: 100%;
+    height: 100%;
+
+}
+
+.head .fl {
+    position: absolute;
+    left: 200px;
+    width: 735px;
+}
+
+.fl ul li {
+    float: left;
+    width: 80px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 25px;
+
+}
+
+.fl ul li:hover {
+    background-color:gray;
+}
+
+
+.fl ul li a {
+    color: black;
+}
+
+
+
+
+
+.fl ul li ul.sub-menu {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.2);
+
+}
+
+.fl ul li:hover>ul.sub-menu {
+    display: block;
+}
+
+.fl ul li ul.sub-menu li {
+    float: none;
+    width: 80px;
+    height: 40px;
+    font-size: 16px;
+    line-height: 40px;
+    text-align: center;
+
+}
+
+.fl .white {
+    width: 1px;
+    height: 18px;
+    line-height: 90px;
+    background-color: #fff;
+    margin: 38px 15px 0;
+
+}
+
+.login {
+    float: right;
+
+    width: 300px;
+    height: 90px;
+    line-height: 90px;
+}
+
+
+.login ul li {
+    float: left;
+
+    margin-left: 20px;
+    font-size: 18px;
+    color: black;
+}
+
+
+
+
+.s_red {
+    color: black;
+}
+
+.phone {
+    float: right;
+    margin-right: 60px;
+    line-height: 90px;
+    font-size: 18px;
+    color: #fff;
+}
+
+
+
+.logo {
+    padding-top: 18px;
+}
+
+
+/* 轮播图开始 */
+
+
+.carousel .controls button {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: rgb(194, 46, 46);
+	
+    border-radius: 50%;
+    margin:  4px;
+    cursor: pointer;
+}
+
+
+#wrap {
+			  overflow: hidden;
+			  position: relative;
+			  width: 1100px;
+			  height: 580px;
+			  margin: 50px auto ;
+			  border: 0px solid black;
+			}
+			#wrap .img-list {
+			  display:flex;
+			  position: relative;
+			  left: 0px;
+			  width: 780%;
+			  height: 90%;
+			  transition: 0.5s ease;
+			}
+			#wrap .img-list img {
+				margin-top: 100px;
+			  height: 100%;
+			  width: 100%;
+			  cursor: pointer;
+			}
+			#wrap a {
+			  position: absolute;
+			  top: 50%;
+			  transform: translate(0, -50%);
+			  display: block;
+			  width: 40px;
+			  height: 70px;
+			  background-color:black;
+			  color: white;
+			  user-select: none;
+			  font-size: 30px;
+			  text-align: center;
+			  line-height: 70px;
+			  text-decoration: none;
+			}
+			#wrap a.left {
+			  left: 0;
+			}
+			#wrap a.right {
+			  right: 0;
+			}
+			.circle-list {
+			  display: flex;
+			  position: absolute;
+			  bottom: 20px;
+			  left: 50%;
+			  transform: translate(-50%, 0);
+			  width: 120px;
+			  height: 40px;
+			  z-index: 8;
+			}
+			.circle-list > .circle {
+			  margin: 0 5px;
+			  width: 15px;
+			  height: 15px;
+			  background-color: #ecf0f1;
+			  border-radius: 50%;
+			}
+			.circle-list > .circle.active {
+			  background-color: #e74c3c;
+			}
+
+/* 旅行栏开始 */
+.travel {
+    position: relative;
+    width: 1460px;
+    left: 50%;
+	margin-top: 0%;
+    margin-left: -720px;
+    bottom: -20px;
+    text-align: center;
+
+    height: 70px;
+
+    line-height: 70px;
+    border-radius: 20px; 
+   border-color: #333030;
+
+}
+
+.start{
+	border:3px solid black;
+	 border-radius: 50px; 
+}
+
+
+.start h2 {
+    margin-left: 55px;
+    float: left;
+    font-size: 20px;
+    border-color: #333030;
+    color: black;
+}
+
+.start input {
+    margin-left: 400px;
+    width: 300px;
+    height: 35px;
+    border-radius: 50px;
+    padding-left: 10px;
+    background-color: rgba(255, 255, 255, 1);
+    border: 1px solid #333030;
+
+}
+
+
+
+.start .search_icon {
+    display: inline-block;
+    width: 50px;
+    height: 70px;
+    content: 'f002';
+    color: #514d4d;
+    font-family: 'icomoon';
+
+    line-height: 70px;
+    font-size: 20px;
+}
+
+.start button {
+    position: absolute;
+	margin-left: 0px;
+    right: 0;
+     width: 150px;
+    border-radius: 0 50px 50px 0;
+    color:black;
+    font-size: 16px;
+    line-height: 70px;
+
+}
+
+.s_date {
+    position: absolute;
+    right: 0;
+    top: -60px;
+    font-size: 16px;
+    color: #fff;
+
+}
+
+
+
+
+/* .relation {
+    position: fixed;
+    right: 0;
+    top: 25%;
+    width: 50px;
+    height: 320px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 35px;
+
+}
+
+.relation ul li {      
+    display: block;
+    height: 50px;
+    margin-top: 15px;
+    line-height: 50px;
+
+}
+
+.return {
+    margin-top: 70px;
+    margin-left: 10px;
+}
+
+.return a {
+    font-family: 'icomoon';
+    color: black;
+    font-size: 50px;
+
+}
+
+.relation img {
+    width: 100%;
+    height: 100%;
+} */
+
+
+
+
+
+
+
+.travel_icon {
+    position: absolute;
+    top: 0;
+    right: 30%;
+    font-family: "icomoon";
+    font-size: 20px;
+
+}
+
+.box3 {
+    margin-top: 50px;
+    height: 620px;
+   width: 100%; 
+    
+}
+
+.box3_h {
+    height: 100px;
+     
+    text-align: center;
+    font-size: 40px;
+    color: black;
+}
+
+.box3_img {
+    height: 480px;
+	width: 100%;
+	 flex: 1;
+	 display: flex;
+	 }
+
+/* 遮罩效果 */
+.mask {
+    /* 隐藏遮罩层 */
+    display: none;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6)
+}
+
+/* 当我们鼠标经过了 土豆这个盒子，就不让里面遮罩层显示出来 */
+.rimg:hover .mask {
+    display: block;
+
+}
+
+.limg ul li:hover .mask {
+    display: block;
+}
+
+.mask p {
+    color: #fff;
+    font-size: 18px;
+    padding: 50px;
+    text-align: center;
+}
+
+/* 遮罩效果结束 */
+.rimg {
+    position: relative;
+    float: left;
+    width: 500px;
+    height: 550px;
+
+}
+
+.rimg h4 {
+    height: 40px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 40px;
+    color: #fff;
+    background-color: #1B4549;
+}
+
+.rimg img {
+    width: 100%;
+    height: 100%;
+}
+
+.limg {
+
+    float: right;
+    height: 600px;
+    width: 940px;
+}
+
+.limg ul li {
+    position: relative;
+    float: left;
+    width: 440px;
+    height: 250px;
+    margin-left: 15px;
+    margin-bottom: 50px;
+
+}
+
+.limg ul li img {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.lfoot {
+    display: block;
+    height: 40px;
+    padding-left: 20px;
+    font-size: 16px;
+
+    line-height: 40px;
+    color: #fff;
+    background-color: #1B4549;
+}
+
+.box4 {
+    height: 500px;
+    margin-top: 150px;
+
+}
+
+.box4_img {
+    position: relative;
+    float: left;
+    height: 300px;
+
+
+}
+
+.box4_img ul li {
+    float: left;
+    margin: 0 15px;
+}
+
+.box4_img ul span {
+    display: block;
+    width: 450px;
+    height: 40px;
+    background-color: #1B4549;
+    font-size: 16px;
+    line-height: 40px;
+    padding-left: 10px;
+    color: #fff;
+}
+
+/* 翻转效果开始 */
+
+
+
+.item {
+    position: relative;
+    width: 450px;
+    height: 250px;
+}
+
+.item img,
+.text {
+    width: 450px;
+    height: 250px;
+    position: absolute;
+    top: 0;
+    transition: all 2.5s;
+}
+
+.item img {
+
+    background-size: cover;
+    transform: rotateY(0);
+    border: 1px solid gray;
+    box-sizing: border-box;
+    /* rotate,rotateX, rotateY   deg */
+
+}
+
+.item .text {
+    background-color: rgba(0, 0, 0, 0.6);
+    transform: rotateY(-180deg);
+    text-align: center;
+
+    font-size: 18px;
+    color: #fff;
+    backface-visibility: hidden;
+    padding-top: 100px;
+    box-sizing: border-box;
+    line-height: 30px;
+}
+
+.item:hover img {
+    transform: rotateY(180deg);
+}
+
+.item:hover .text {
+    transform: rotateY(0);
+}
+
+
+
+/* 翻转效果结束 */
+
+/* footer开始了 */
+
+.footer {
+    height: 200px;
+    background-color: gainsboro;
+   
+
+}
+
+.flast  {
+    width: 100%;
+    height:50px ;
+    background-color: gray;
+    font-weight: 30px;
+	font-size: 30px;
+}
+
+
+

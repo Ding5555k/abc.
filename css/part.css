@@ -1,0 +1,232 @@
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+
+/* .w {
+	border: 3px solid black;
+    width: 1440px;
+    margin: 0 auto;
+} */
+
+body {
+    background:url("../imgs/a20.png");
+}
+
+/* head区域 */
+
+.head {
+    position:absolute;
+    left: 50%;
+    width: 1440px;
+    margin-left: -720px;
+    z-index: 3;
+    background: rgba(0, 0, 0, 0);
+    height: 90px;
+	border-bottom: 3px solid black;
+	
+}
+.head .logo {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    width: 59px;
+    height: 71px;
+    line-height: 71px;
+    margin-left: 50px;
+
+
+}
+
+.head .logo img {
+
+    width: 100%;
+    height: 100%;
+
+}
+
+.head .fl {
+    position: absolute;
+    left: 200px;
+    width: 735px;
+}
+
+.fl ul li {
+    float: left;
+    width: 80px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 25px;
+
+}
+.fl ul li:hover {
+    background-color: gray;
+}
+
+
+.fl ul li a {
+    color: black;
+}
+
+.fl ul li ul.sub-menu {
+    display: none;
+    position: absolute;
+    background-color:rgba(0, 0, 0, 0.2);
+
+}
+
+.fl ul li:hover>ul.sub-menu {
+    display: block;
+}
+
+.fl ul li ul.sub-menu li {
+    float: none;
+    width: 80px;
+    height: 40px;
+    font-size: 16px;
+    line-height: 40px;
+    text-align: center;
+
+}
+
+.fl .white {
+    width: 1px;
+    height: 18px;
+    line-height: 90px;
+    background-color: #fff;
+    margin: 38px 15px 0;
+
+}
+
+
+.login {
+    float: right;
+    width: 300px;
+    height: 90px;
+    line-height: 90px;
+}
+
+
+.login ul li {
+    float: left;
+
+    margin-left: 20px;
+    font-size: 16px;
+    color: black;
+}
+
+
+
+
+.s_red {
+    color: black;
+}
+
+.phone {
+    float: right;
+    margin-right: 60px;
+    line-height: 90px;
+    font-size: 16px;
+    color: #fff;
+}
+
+
+
+.logo {
+    padding-top: 18px;
+}
+
+.photos{
+	height: 400px;
+	width: 100%;
+}
+.photos video{
+	
+	height: 500px;
+	 width: 86%;
+	 margin-top: 95px;
+	 margin-left: 7%;
+	 
+}
+		
+       .tou {
+       	height: 200px;
+           width: 100%;
+        3
+       }
+       .title {
+           width: 1200px;
+           height: 140px;
+           background-position: center;
+           color: #fff;
+       }
+       .title h3 {
+           padding-left: 650px;
+           line-height: 380px;
+           color: #812918;
+           font-size: 30px;
+       }
+       
+       .title p {
+           padding-left: 600px;
+           color: #B4B4B4;
+           font-size: 20px;
+       }
+       
+       
+       #box1 {
+           width: 1100px;
+           margin: 0 auto;
+           margin-top: 50px;
+           margin-bottom: 60px;
+       }
+       
+       #box1 h3 {
+           font-size: 30px;
+           border-bottom: 1px solid #EEEEEE;
+           padding: 10px 0px;
+           margin-bottom: 30px;
+       }
+       
+       #box1 h3 span {
+           color: #878787;
+           font-size: 20px;
+           margin-left: 10px;
+       }
+       .box1-txt {
+           padding: 20px;
+       }
+       .wenhua-tupian {
+           float: left;
+           width: 200px;
+       	height: 300px;
+           margin-right: 20px;
+           margin-bottom: 20px;
+       }
+       .box1-txt p {
+           text-indent: 2rem;
+           line-height: 2em;
+           color: #333;
+           margin-bottom: 20px;
+		   font-size: 15px;
+       }
+       
+     .footer {
+         height: 200px;
+         background-color: gainsboro;
+        
+     
+     }
+     
+     .flast  {
+         width: 100%;
+         height:50px ;
+         background-color: gray;
+         font-weight: 30px;
+     	font-size: 30px;
+     }

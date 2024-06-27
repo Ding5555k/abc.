@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description"
+       
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>景德镇欢迎您！</title>
+	 <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/index.css">
+
+
+
+</head>
+
+
+<body>
+   
+    <header>
+
+        <div class="head" id="top">
+            <div class="w">
+                <div class="logo">
+                    
+                    <h1><a href="index.html" title="景德镇">
+                            <img src='imgs/a1.jpg' alt="" class="logo_img">
+                        </a></h1>
+                </div>
+                <div class="fl">
+                    <ul class="clearfix">
+                        <li>
+                            <a href="#">景德镇</a>
+                            <ul class="sub-menu">
+                                <li><a href="#">景德镇介绍</a></li>
+                                <li><a href="#">风土民情</a></li>
+                            </ul>
+                        </li>
+                        <li class="white"></li>
+                        <li>
+                            <a href="list.html">景德特色</a>
+                            <ul class="sub-menu">
+                                <li><a href="#">旅游景点</a></li>
+                                <li><a href="#">特色美食</a></li>
+                            </ul>
+                        </li>
+                        <li class="white"></li>
+                        <li><a href="#">线上预订</a></li>
+                        <li class="white"></li>
+                        <li>
+                            <a href="#">帮助协商</a>
+                            <ul class="sub-menu">
+                                
+                                <li><a href="#">联系我们</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="login">
+                    <ul>
+                        <li>景德镇欢迎您！</li>
+                        <li><a href="login.html" style="color: black;">登录</a></li>
+                        <li><a href="myself.html" class="s_red">个人</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <!-- 头部区域end -->
+
+    <!-- section start:必须是轮播图，用JS实现。 -->
+   <section>
+	   
+	   <div id="wrap">
+	   	   <div class="img-list">
+	   	    <img src="imgs/a2.png"/>
+	   		<img src="imgs/a3.png"/>
+	   		<img src='imgs/a5.png'/>
+	   		<img src='imgs/a4.png'/>
+	   		<img src="imgs/a6.png"/>
+	   		<img src='imgs/a6.png'/>
+	   	   </div>
+	   	
+	   	   <div class="arrow">
+	   	     <a href="javascript:;" class="left"><</a>
+	   	     <a href="javascript:;" class="right">></a>
+	   	   </div>
+	   	
+	   	   <ul class="circle-list">
+	   	     <li class="circle active" data-n="0"></li>
+	   	     <li class="circle" data-n="1"></li>
+	   	     <li class="circle" data-n="2"></li>
+	   	     <li class="circle" data-n="3"></li>
+	   	     <li class="circle" data-n="4"></li>
+	   	   </ul>
+	   	 </div>
+		 
+	   	<script>
+	   		
+	   	   let oLeft = document.querySelector(".left");
+	   	   let oRight = document.querySelector(".right");
+	   	   let oImgList = document.querySelector(".img-list");
+	   	
+	   	   let clonefirstImg = oImgList.firstElementChild.cloneNode();
+	   	   oImgList.appendChild(clonefirstImg);
+	   	
+	   	   let index = 0;
+	   	
+	   	   let lock = true;
+	   	   function handleRightBtn() {
+	   	     if (!lock) return;
+	   	     index++;
+	   	     oImgList.style.left = index * -1226 + "px";
+	   	     oImgList.style.transition = "0.5s ease";
+	   	
+	   	     if (index === 5) {
+	   	       index = 0;
+	   	       setTimeout(() => {
+	   	         oImgList.style.left = 0;
+	   	         oImgList.style.transition = "none";
+	   	       }, 500);
+	   	     }
+	   
+	   	     setCircles();
+	   	     lock = false;
+	   	     setTimeout(() => {
+	   	       lock = true;
+	   	     }, 500);
+	   	   }
+	   	
+	   	   oRight.addEventListener("click", handleRightBtn);
+	   	
+	   	   oLeft.addEventListener("click", () => {
+	   	     if (!lock) return;
+	   	     index--;
+	   	     if (index === -1) {
+	   	       oImgList.style.left = 5 * -1226 + "px";
+	   	       oImgList.style.transition = "none";
+	   	       index = 4;
+	   	       setTimeout(() => {
+	   	         oImgList.style.left = index * -1226 + "px";
+	   	         oImgList.style.transition = "0.5s ease";
+	   	       }, 0);
+	   	     } else {
+	   	       oImgList.style.left = index * -1226 + "px";
+	   	     }
+	   		 
+	   	     setCircles();
+	   	
+	   	     lock = false;
+	   	     setTimeout(() => {
+	   	       lock = true;
+	   	     }, 500);
+	   	   });
+	   	   const circles = document.querySelectorAll(".circle");
+	   	   function setCircles() {
+	   	     for (let i = 0; i < circles.length; i++) {
+	   	       if (i === index) {
+	   	         circles[i].classList.add("active");
+	   	       } else {
+	   	         circles[i].classList.remove("active");
+	   	       }
+	   	     }
+	   	   }
+	   	   const oCircle = document.querySelector(".circle-list");
+	   	   oCircle.addEventListener("click", (e) => {
+	   	     if (e.target.nodeName.toLowerCase() === "li") {
+	   	       const n = Number(e.target.getAttribute("data-n"));
+	   	       index = n;
+	   	       setCircles();
+	   	       oImgList.style.transition = "0.5s ease";
+	   	       oImgList.style.left = index * -1226 + "px";
+	   	     }
+	   	   });
+	   	   let autoplay = setInterval(handleRightBtn, 2000);
+	   	   const oWrap = document.getElementById("wrap");
+	   	   oWrap.addEventListener("mouseenter", () => {
+	   	     clearInterval(autoplay);
+	   	   });
+	   	   oWrap.addEventListener("mouseleave", () => {
+	   	     clearInterval(autoplay);
+	   	     autoplay = setInterval(handleRightBtn, 2000);
+	   	   });
+	   	 </script>
+	   
+	   
+       
+    </section>
+	
+	
+    <!-- section end -->
+    <!-- main区域start：图文并茂、布局合理（单列、两列或者三列）。 -->
+    <main>
+       <div class="travel"> 
+            <div class="w">
+                <div class="start">
+                    <h2>御窑瓷韵传千古，文化瑰宝等你来探索。</h2>
+                    <input type="search" placeholder="景德镇旅游攻略">
+                    <a href="#"><span class="search_icon"></span></a>
+                    <a href="#"><button>探索之旅<i class="travel_icon"></i></button></a>
+                </div>
+                <!-- <div id="clock"></div> -->
+               
+                
+            </div>
+        </div>
+       
+
+    </main>
+    <!-- main1区域end -->
+    
+    
+   
+    <main>
+        <div class="w">
+            <div class="box3">
+                <div class="box3_h">
+                    <h3>旅游攻略</h3>
+                </div>
+                <div class="box3_img">
+                    <div class="rimg ">
+                     <a href="#"><img src='imgs/a8.png' alt="">
+                            <div class="mask">
+                                <p style="padding-top: 100px;">
+                                    &nbsp;&nbsp;景德镇，中国瓷都，拥有悠久陶瓷文化历史和精湛瓷器工艺。古城探访、瓷器文化之旅、最美景观、美食之旅和艺术之行，全方位体验瓷都魅力。山水环绕，美食独特，艺术氛围浓厚，是理想的旅游目的地。
+                                </p>
+                                <p>&nbsp;&nbsp;作为中国瓷都，景德镇以其悠久的陶瓷文化历史和精湛的瓷器工艺闻名于世。这座古老的城市不仅是陶瓷艺术的发源地，更是一个充满魅力和历史底蕴的旅游胜地。让我们一起探寻中国瓷都之魅，揭开景德镇的神秘面纱！
+
+
+                                </p>
+                            </div>
+                           
+                        </a>
+                    </div>
+                    <div class="rimg">
+						<a href="#"><img src='imgs/a11.png' alt="">
+						        <div class="mask">
+						            <p style="padding-top: 100px;">
+						                &nbsp;&nbsp;景德镇，美食与美景的完美结合。在这里，你可以品尝到各种地道的江西美食，如瓷器炖肉、瓷器炖鸡等。同时，你还可以领略到景德镇独特的风景，如美丽的瑶里古镇、古色古香的御窑景区等。
+						            </p>
+						            <p>&nbsp;&nbsp;尝一口当地的瓷器茶，品味景德镇的美食，游览独特的瓷器博物馆，这座城市让人流连忘返！
+						
+						
+						            </p>
+						        </div>
+						    </a>
+						 </div>
+					<div class="rimg ">
+					 <a href="#"><img src='imgs/a10.png' alt="">
+					        <div class="mask">
+					            <p style="padding-top: 100px;">
+					                &nbsp;&nbsp;它可以在水边、在山野、在阡陌，也可以是在海尽头、雪山之巅、神山之傍，总之，它的模样是看得见山、看得见水、望得见乡愁。
+					            </p>
+					            <p>&nbsp;&nbsp;驱车穿过山岚，驶入绿野，村庄于熹微薄雾中若隐若现，山坡上，白房灰瓦的建筑藏匿于一片绿茵中愈发熠熠生辉！
+					
+					
+					            </p>
+					        </div>
+					        
+					    </a>
+					</div>
+
+                </div>
+
+            </div>
+            <div class="box4">
+                <div class="box3_h" style="margin-top: 50px;">
+                    <h4>领略文化的魅力</h4>
+                </div>
+                <div class='box4_img'>
+                    <ul class="clearfix">
+                        <li><a href="#">
+                                <div class="item">
+                                    <img src='imgs/a12.png' alt="">
+                                    <div class="text">
+                                        高岭重峦叠嶂，昌江碧波荡漾，这里的每一寸土地，都在以泥与火交织的语言，向你讲述着景德镇的前世今生。
+                                    </div>
+                                </div>
+                               
+
+                            </a>
+                        </li>
+                        <li><a href="#">
+                                <div class="item">
+                                    <img src='imgs/a13.png' alt="">
+                                    <div class="text">
+                                        彭家弄的历史最早可追溯到宋代，距今已有千年时光。不过如今的巷子已不是最初模样，现存建筑大多为明清时期所建，青砖褐瓦，曲折小径，古朴幽静。
+                                        
+                                    </div>
+                                </div>
+                                
+                            </a>
+                        </li>
+                        <li><a href="#">
+                                <div class="item">
+                                    <img src='imgs/a14.png' alt="">
+                                    <div class="text">
+                                       千年瓷都——景德镇御窑博物馆。因窑而生，因瓷而盛。 
+                                    </div>
+                                </div>
+                                
+                            </a>
+                        </li>
+
+
+                    </ul>
+                </div>
+            </div>
+
+
+        </div>
+
+    </main>
+    <!-- main3区域结束-->
+
+
+    <!-- footer区域start：版权标志、姓名、学号 -->
+    <footer>
+          <div class="flast">
+            <span >版权申明</span>
+            <span>丁赛阳&copy;20220002158&copy;</span>
+			<span>吉林农业科技学院</span>
+        </div>
+
+    </footer>
+
+
+    <!-- footer区域end -->
+    <!-- <script src="js/ret.js"></script> -->
+
+  
+</body>
+
+
+</html>

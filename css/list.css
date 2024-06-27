@@ -1,0 +1,335 @@
+/* @font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.eot?4opn0b');
+    src: url('../fonts/icomoon.eot?4opn0b#iefix') format('embedded-opentype'),
+        url('../fonts/icomoon.ttf?4opn0b') format('truetype'),
+        url('../fonts/icomoon.woff?4opn0b') format('woff'),
+        url('../fonts/icomoon.svg?4opn0b#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] { */
+    /* use !important to prevent issues with browser extensions that change fonts */
+   /* font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1; */
+
+    /* Better Font Rendering =========== */
+   /* -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+} */
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+.w {
+    width: 1440px;
+    margin: 0 auto;
+}
+
+body {
+    background:url("../imgs/a20.png");
+}
+
+/* head区域 */
+.head {
+    position:absolute;
+    left: 50%;
+    width: 1440px;
+    margin-left: -720px;
+    z-index: 3;
+    background: rgba(0, 0, 0, 0);
+    height: 90px;
+	border-bottom: 3px solid black ;
+	
+}
+.head .logo {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    width: 59px;
+    height: 71px;
+    line-height: 71px;
+    margin-left: 50px;
+
+
+}
+
+.head .logo img {
+
+    width: 100%;
+    height: 100%;
+
+}
+
+.head .fl {
+    position: absolute;
+    left: 200px;
+    width: 735px;
+}
+
+.fl ul li {
+    float: left;
+    width: 80px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 25px;
+
+}
+.fl ul li:hover {
+    background-color: gray;
+}
+
+
+.fl ul li a {
+    color: black;
+}
+
+.fl ul li ul.sub-menu {
+    display: none;
+    position: absolute;
+    background-color:rgba(0, 0, 0, 0.2);
+
+}
+
+.fl ul li:hover>ul.sub-menu {
+    display: block;
+}
+
+.fl ul li ul.sub-menu li {
+    float: none;
+    width: 80px;
+    height: 40px;
+    font-size: 16px;
+    line-height: 40px;
+    text-align: center;
+
+}
+
+.fl .white {
+    width: 1px;
+    height: 18px;
+    line-height: 90px;
+    background-color: #fff;
+    margin: 38px 15px 0;
+
+}
+
+
+.login {
+    float: right;
+
+    width: 300px;
+    height: 90px;
+    line-height: 90px;
+}
+
+
+.login ul li {
+    float: left;
+
+    margin-left: 20px;
+    font-size: 16px;
+    color: black;
+}
+
+
+
+
+.s_red {
+    color: black;
+}
+
+.phone {
+    float: right;
+    margin-right: 60px;
+    line-height: 90px;
+    font-size: 16px;
+    color: #fff;
+}
+
+
+
+.logo {
+    padding-top: 18px;
+}
+
+.photos{
+	height: 400px;
+	width: 100%;
+}
+.photos img{
+	height: 500px;
+	 width: 86%;
+	 margin-top: 95px;
+	 margin-left: 7%;
+}
+		.h2 {
+			    position: relative;
+			    z-index: 3;
+			    text-align: center;
+				font-size: 20px;
+				
+			}
+			.h2 p {
+			    color: #7e7e7e;
+			    line-height: 30px;
+			    margin-top: 10px;
+			}
+			.Co_create_works {
+			    width: 100%;
+				height: 650px;
+				
+			    padding: 50px 0px;
+			    
+			    background-position: center;
+			    background-size: cover;
+				margin-top: 200px;
+			}
+			.Co_create_works_box {
+			    width: 1200px;
+			    margin: 0 auto;
+				margin-left: 17%;
+			}
+			.Co_create_works_box h3 {
+			    font-size: 26px;
+			    line-height: 40px;
+			    margin: 10px 0px;
+			}
+			.works_box_img1 {
+			    width: 100%;
+				background-image: url("../imgs/a21.png");
+			    height: 286px;
+			    overflow: hidden;
+			    text-align: center;
+			    position: relative;
+			}
+			.works_box_img2 {
+			    width: 100%;
+				background-image: url('../imgs/a22.png');
+			    height: 286px;
+			    overflow: hidden;
+			    text-align: center;
+			    position: relative;
+			}
+			.works_box_img3 {
+			    width: 100%;
+				background-image: url('../imgs/a23.png');
+			    height: 286px;
+			    overflow: hidden;
+			    text-align: center;
+			    position: relative;
+			}
+			.works_box_txt {
+			    height: 78px;
+			    overflow: hidden;
+			    font-size: 20px;
+			    color: #999;
+			    line-height: 26px;
+			}
+			.Co_create_works_box li {
+			    width: 296px;
+				height: 450px;
+			    display: inline-block;
+			    margin: 30px 30px;
+			    background-color:white;
+			    border-radius: 20px;
+			    padding: 20px 20px;
+			}
+			
+			
+			.h2 {
+			    position: relative;
+			    z-index: 3;
+			    text-align: center;
+			}
+			.h2 p {
+			    color: #7e7e7e;
+			    line-height: 30px;
+			    margin-top: 10px;
+			}
+			.Co_create_workss {
+			    width: 100%;
+				height: 650px;
+				
+			    padding: 50px 0px;
+			  
+			    background-position: center;
+			    background-size: cover;
+			}
+			.Co_create_workss_box {
+			    width: 1200px;
+			    margin: 0 auto;
+				margin-left: 17%;
+			}
+			.Co_create_workss_box h3 {
+			    font-size: 26px;
+			    line-height: 40px;
+			    margin: 10px 0px;
+			}
+			.workss_box_img1 {
+			    width: 100%;
+				background-image: url("../imgs/a24.png");
+			    height: 286px;
+			    overflow: hidden;
+			    text-align: center;
+			    position: relative;
+			}
+			.workss_box_img2 {
+			    width: 100%;
+				background-image: url("../imgs/a25.png");
+			    height: 286px;
+			    overflow: hidden;
+			    text-align: center;
+			    position: relative;
+			}
+			.workss_box_img3 {
+			    width: 100%;
+				background-image: url("../imgs/a27.png");
+			    height: 286px;
+			    overflow: hidden;
+			    text-align: center;
+			    position: relative;
+			}
+			.workss_box_txt {
+			    height: 78px;
+			    overflow: hidden;
+			    font-size: 20px;
+			    color: #999;
+			    line-height: 26px;
+			}
+			.Co_create_workss_box li {
+			    width: 296px;
+				height: 450px;
+			    display: inline-block;
+			    margin: 30px 30px;
+			    background-color:white;
+			    border-radius: 20px;
+			    padding: 20px 20px;
+			}
+			.footer {
+			    height: 200px;
+			    background-color: gainsboro;
+			   
+			
+			}
+			
+			.flast  {
+			    width: 100%;
+			    height:50px ;
+			    background-color: gray;
+			    font-weight: 30px;
+				font-size: 30px;
+			}
